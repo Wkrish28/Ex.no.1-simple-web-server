@@ -31,7 +31,7 @@ Run the application using your IDE or via the command line (mvn spring-boot:run 
 Test the Endpoint:
 
 Open a web browser or use Postman to visit:
-http://localhost:8080/hello
+http://localhost:4000/hello
 
 You should see the output (e.g., "Hello World").
 
@@ -41,7 +41,7 @@ Stop the Spring Boot server once testing is complete.
 
 
 ## Program 
-
+```
 simple-web-server/
 ├── src/
 │   └── main/
@@ -52,9 +52,9 @@ simple-web-server/
 │       └── resources/
 │           └── application.properties
 ├── pom.xml
-
+```
  ### Pom.xml
-
+``` xml
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
@@ -91,9 +91,9 @@ simple-web-server/
         </plugins>
     </build>
 </project>
-
+```
 ### DemoApplication.java
-
+```java
 package com.example.demo;
 
 import org.springframework.boot.SpringApplication;
@@ -106,8 +106,9 @@ public class DemoApplication {
     }
 }
 
-
+```
 ### HelloController.java
+```java
 package com.example.demo;
 
 import org.springframework.web.bind.annotation.GetMapping;
@@ -122,14 +123,17 @@ public class HelloController {
     }
 }
 
-
+```
 ### application.properties:
+```
+ server.port=4000
+```
 
- server.port=8081
+### Output:
 
+<img width="1406" height="223" alt="image" src="https://github.com/user-attachments/assets/fdacf822-e3a9-452c-a4c1-c891593f60dc" />
 
-
-
-Output:
-
+### Result:
+The Spring Boot application was successfully developed and executed, handling HTTP requests through RESTful endpoints.
+The /hello endpoint returned the expected response “Hello, Spring Boot!” on port 4000.
 
